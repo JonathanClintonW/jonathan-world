@@ -4,7 +4,14 @@ module.exports = {
     "./src/views/**/*.ejs"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        monserrat: ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+
+      },
+    },
   },
   plugins: [],
 }

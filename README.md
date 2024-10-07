@@ -18,24 +18,28 @@ This section highlights the primary frameworks and libraries utilized in this pr
 1. Clone the repository
 2. Install depedencies
 ```sh
-npm install express next react react-dom
+npm install express
+npm install --save-dev nodemon
 ```
 
 ```sh
-npm install -D tailwindcss postcss autoprefixer
+npm install tailwindcss postcss autoprefixer
 ```
 
 ```sh
 npx tailwindcss init
 ```
 
-3. Install dotenv
+3. Install axios and dotenv
 ```sh
-npm install dotenv
+npm install axios dotenv
 ```
 4. Create a .env file if it doesn't exist
 5. Run the application
 * Development
+```sh
+npm run build:css
+```
 ```sh
 npm run dev
 ```

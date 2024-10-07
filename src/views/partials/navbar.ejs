@@ -1,0 +1,35 @@
+<section id="navbar">
+    <div class="flex items-center justify-between uppercase font-semibold text-sm">
+        <div class="flex flex-col">
+            <a href="">Jakarta, Indonesia</a>
+            <span id="jakarta-time" class=""></span>
+        </div>
+        <div class="flex gap-5 rounded-full border border-black p-3">
+            <a href="">About</a>
+            <a href="">Works</a>
+            <a href="">Let's Talk</a>
+        </div>
+    </div>
+</section>
+<script>
+    function updateJakartaTime() {
+        const jakartaTimeElement = document.getElementById('jakarta-time');
+        const now = new Date();
+        const utcOffset = 7 * 60 * 60 * 1000;
+        const jakartaTime = new Date(now.getTime() + (now.getTimezoneOffset() * 60 * 1000) + utcOffset); 
+
+        let hours = jakartaTime.getHours();
+        const minutes = String(jakartaTime.getMinutes()).padStart(2, '0');
+
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const formattedTime = `${hours}:${minutes} ${ampm}`;
+        jakartaTimeElement.textContent = formattedTime;
+    }
+
+    setInterval(updateJakartaTime, 1000);
+    updateJakartaTime();
+</script>
