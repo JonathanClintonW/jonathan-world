@@ -1,5 +1,25 @@
-<section id="main" class="relative h-screen w-screen bg-fixed bg-cover bg-center -z-10">
-  <div class="fixed inset-0 flex items-center justify-center">
-    <h1 class="font-bold text-5xl">TEST TEXT</h1>
+<section id="main" class="text-white relative h-80 bg-fixed bg-cover bg-center -z-10">
+  <div id="scroll-div" class="fixed inset-0 flex items-center justify-center" data-speed="0.5">
+    <div class="flex items-center justify-center gap-5">
+      <h1 id="scroll-left" class="font-bold text-8xl">JONATHAN</h1>
+      <h1 id="scroll-right" class="font-bold text-8xl">CLINTON</h1>
+    </div>
+
   </div>
 </section>
+<script>
+  window.addEventListener("scroll", function () {
+    const scrollDiv = document.getElementById("scroll-div");
+    const scrollLeft = document.getElementById("scroll-left");
+    const scrollRight = document.getElementById("scroll-right");
+
+    const scrollY = window.scrollY;
+    const speed = parseFloat(scrollDiv.getAttribute('data-speed'));
+
+    scrollDiv.style.transform = `translateY(${-scrollY * speed * 1.5}px)`;
+
+    scrollLeft.style.transform = `translateX(${-scrollY * speed}px)`;
+
+    scrollRight.style.transform = `translateX(${scrollY * speed}px)`;
+  });
+</script>

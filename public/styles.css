@@ -1,8 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.h-80 {
+    height: 80vh;
+}
+
+.galaxy-gradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(155deg, rgba(0,0,0,1) 0%, rgba(69,28,140,1) 31%, rgba(115,80,204,1) 60%, rgba(135,75,199,1) 79%, rgba(31,75,194,1) 100%);
+}

@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/views/**/*.ejs"
+    "./src/views/**/*.ejs",
+    "./src/**/*.ejs" 
   ],
   theme: {
     extend: {
@@ -17,6 +18,9 @@ module.exports = {
         white: '#FFFFFF',
         black: '#000000',
       },
+      fontSize: {
+        '128px': '128px',
+      }
     },
   },
   plugins: [],
