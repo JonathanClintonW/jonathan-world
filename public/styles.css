@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.h-80 {
-    height: 80vh;
+.h-90 {
+    height: 90vh;
 }
 
 .galaxy-gradient {

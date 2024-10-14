@@ -1,3 +1,9 @@
 <section id="expertise" class="bg-black h-screen flex items-center justify-center mx-5 z-5 galaxy-gradient">
   <h2 class="text-white text-4xl">Expertise Section</h2>
 </section>
+<script>
+  document.getElementById("expertise").addEventListener("click", function() {
+    const expertiseSection = document.getElementById("expertise");
+    expertiseSection.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
